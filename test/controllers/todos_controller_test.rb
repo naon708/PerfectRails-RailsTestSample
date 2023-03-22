@@ -1,9 +1,16 @@
 require 'test_helper'
 
 class TodosControllerTest < ActionDispatch::IntegrationTest
+  ### 事前処理
   setup do
     @todo = todos(:one)
+    # puts 'Called setup'
   end
+
+  ### 事後処理
+  # teardown do
+  #   puts 'Called teardown'
+  # end
 
   test "should get index" do
     get todos_url
