@@ -25,3 +25,13 @@ https://railsguides.jp/testing.html
 - プロセス or スレッド
 - DBも並列度に合わせて複数用意される
 
+### Rack
+- APサーバーとフレームワークの中間に存在するもの
+- Rackのおかげで両者が疎結合になり、組み合わせやすくなった
+- Rackミドルウェア: Rack層からフレームワーク層の間で独自の処理を挟める
+
+```ruby
+def call(env)
+  [http_status, http_headers, response_body]
+end
+```
